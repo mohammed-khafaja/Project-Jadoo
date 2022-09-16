@@ -1,0 +1,301 @@
+/* Start Variable */
+:root {
+    --main-color: #eee;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+}
+/* End Variable */
+/*Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.title-head {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.title-head > p {
+    font-size: 25px;
+    color: #5E6282;
+    margin-bottom: 10px;
+}
+.title-head > h2 {
+    font-size: 50px;
+    color: #14183E;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+/* End Global Rules  */
+/* Start header-landing */
+.header-landing {
+    position: relative;
+}
+.header-landing .background-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+}
+/* End header-landing */
+/* Start Header  */
+.header {
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header ul {
+    display: flex;
+}
+.header ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #212832;
+    font-size: 17px;
+    padding: 0px 15px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 1;
+    margin-left: 20px;
+    
+}
+.header ul li:not(:nth-of-type(6)) a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -105%;
+    height: 100%;
+    width: 100%;
+    background-color: #F1A501;
+    z-index: -1;
+    transition: var(--main-transition);
+}
+.header ul li:not(:nth-of-type(6)):hover a::before {
+    left: 0;
+}
+.header ul li a.sign-up {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #F1A501;
+}
+.header ul li a.sign-up:hover {
+    color: white;
+}
+/* End Header  */
+/* Start Landing */
+.landing {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
+.landing .container {
+    display: flex;
+    gap: 5px;
+    
+}
+.landing .content {
+max-width: 50%;
+}
+.landing .content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #DF6951;
+}
+.landing .content h1 {
+    font-size: 84px;
+    font-weight: bold;
+    color: #181E4B;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.landing .content p {
+    font-weight: 600;
+    color: #5E6282;
+    line-height: 2;
+    letter-spacing: 1px;
+    width: 80%;
+}
+.landing .content .box {
+    display: flex;
+    gap: 70px;
+}
+.landing .content .box button {
+    background-color: #F1A501;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 19px;
+    border-radius: 6px;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+.landing .content .box button:hover {
+    transform: translateY(-5px);
+}
+.landing .content .box .video {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.landing .content .box .video:hover {
+    transform: translateX(5px);
+}
+.landing .content .box .video i {
+    color: #DF6951;
+    font-size: 50px;
+}
+.landing .content .box .video span {
+    font-size: 20px;
+}
+.landing img {
+    position: absolute;
+    right: 170px;
+    top: 30px;
+    animation: img-up-down 5s infinite linear;
+}
+/* End Landing */
+/* Start services */
+.services {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.services .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.services .box {
+    box-shadow: 0 0 10px rgb(246, 245, 245);
+    text-align: center;
+    padding: 20px;
+    transition: var(--main-transition);
+}
+.services .box:hover {
+    box-shadow: 0px 0px 30px 0px #FFF1DA;
+}
+.services .box img {
+    max-height: 50px;
+}
+.services .box h3 {
+    color: #1E1D4C;
+}
+.services .box p {
+    color: #5E6282;
+}
+/* End services */
+/* Start top-selling */
+.top-selling {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.top-selling .info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.top-selling .box {
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.top-selling .box:hover {
+    transform: translateY(-10px);
+}
+.top-selling .box img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.top-selling .box .info-2 {
+    margin: 20px;
+}
+.top-selling .box .name-price {
+    display: flex;
+    gap: 140px;
+    align-items: center;
+}
+.top-selling .box .name-price h3 {
+    color: #5E6282;
+    font-weight: normal;
+    font-size: 18px;
+    font-weight: 600;
+}
+.top-selling .box .name-price span {
+    color: #5E6282;
+    font-size: 17px;
+    font-weight: 600;
+}
+.top-selling .box .lociton i {
+    margin-right: 10px;
+}
+.top-selling .box .lociton span {
+    color: #5E6282;
+    font-size: 15px;
+}
+/* End top-selling */
+/* Start Animation */
+@keyframes img-up-down {
+    0% , 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+/* End Animation */
